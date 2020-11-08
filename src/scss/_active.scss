@@ -1,0 +1,28 @@
+.active{
+    &__person{
+        display: block;
+        max-width: 100%;
+
+        visibility: visible;
+        width: auto;
+        height: 250px;
+    }
+
+    &__user{
+        display: flex;
+        flex-direction: column;
+
+        visibility: visible;
+        height: auto;
+        width: auto;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    .active{
+        &__person{
+            height: 350px;
+        }
+    }
+}

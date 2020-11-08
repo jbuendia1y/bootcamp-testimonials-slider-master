@@ -1,0 +1,65 @@
+.person{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-top: 1em;
+    padding: 1em;
+
+    background-image: url(/images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &__img{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+    &__buttons{
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+
+        display: grid;
+        grid-template-columns: repeat(2,50px);
+        grid-template-rows: 40px;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+
+        border: none;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+}
+
+.button{
+    &-prev,&-next{
+    }
+}
+
+@media screen and (min-width:1024px){
+    .person{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-right: 2em;
+        position: relative;
+        z-index: 0;
+        left: -85px;
+
+        &__buttons{
+            left: 80px;
+            bottom: 10px;
+        }
+    }
+
+    .button{
+
+    }
+}
