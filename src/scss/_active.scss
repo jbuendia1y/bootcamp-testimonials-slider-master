@@ -6,6 +6,8 @@
         visibility: visible;
         width: auto;
         height: 250px;
+        position: relative;
+        z-index: 1;
     }
 
     &__user{

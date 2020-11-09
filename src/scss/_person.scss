@@ -6,12 +6,7 @@
     position: relative;
 
     margin-top: 1em;
-    padding: 1em;
-
-    background-image: url(/images/pattern-bg.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    padding-bottom: 1em;
 
     &__img{
         visibility: hidden;
@@ -21,6 +16,7 @@
 
     &__buttons{
         position: absolute;
+        z-index: 100;
         bottom: 0;
         background-color: white;
 
@@ -36,6 +32,13 @@
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
         border-top-right-radius: 40px;
+    }
+
+    &__bg{
+        position: absolute;
+        max-width: 100%;
+        height: 300px;
+        z-index: 0;
     }
 }
 
@@ -56,6 +59,11 @@
         &__buttons{
             left: 80px;
             bottom: 10px;
+        }
+
+        &__bg{
+            height: 425px;
+            bottom: -2px;
         }
     }
 

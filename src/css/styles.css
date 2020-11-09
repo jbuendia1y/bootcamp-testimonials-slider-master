@@ -17,6 +17,7 @@
   font-weight: 300;
   font-size: 0.6em;
   text-align: center;
+  color: #202046;
   padding: 0 1em;
   line-height: 25px;
 }
@@ -26,10 +27,12 @@
 .user__name {
   font-size: 0.5em;
   margin-top: 1em;
+  color: #202046;
 }
 .user__job {
   font-size: 0.4em;
   margin-top: 0.2em;
+  color: #babacf;
 }
 .user__img {
   position: absolute;
@@ -77,11 +80,7 @@
   justify-content: center;
   position: relative;
   margin-top: 1em;
-  padding: 1em;
-  background-image: url(/images/pattern-bg.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  padding-bottom: 1em;
 }
 .person__img {
   visibility: hidden;
@@ -90,6 +89,7 @@
 }
 .person__buttons {
   position: absolute;
+  z-index: 100;
   bottom: 0;
   background-color: white;
   display: grid;
@@ -103,6 +103,12 @@
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   border-top-right-radius: 40px;
+}
+.person__bg {
+  position: absolute;
+  max-width: 100%;
+  height: 300px;
+  z-index: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -118,6 +124,10 @@
     left: 80px;
     bottom: 10px;
   }
+  .person__bg {
+    height: 425px;
+    bottom: -2px;
+  }
 }
 .active__person {
   display: block;
@@ -125,6 +135,8 @@
   visibility: visible;
   width: auto;
   height: 250px;
+  position: relative;
+  z-index: 1;
 }
 .active__user {
   display: flex;
@@ -145,6 +157,8 @@
     grid-template-columns: repeat(2, 50%);
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 5%;
   }
 }
 /* Base */

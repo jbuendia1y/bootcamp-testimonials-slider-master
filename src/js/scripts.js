@@ -23,34 +23,36 @@ const user__name = document.getElementsByClassName('user__name')[0];
 const job = document.getElementsByClassName('user__job')[0];
 
 const changePrev = ()=>{
-    if(cont > 0){
-        person__img.src = data[cont-1].img
-        text.innerText = data[cont-1].text
-        user__name.innerText = data[cont-1].name
-        job.innerText = data[cont-1].job
+    if(cont>0){
         cont--
-    }else{
-        person__img.src = data[data.length-1].img
-        text.innerText = data[data.length-1].text
-        user__name.innerText = data[data.length-1].name
-        job.innerText = data[data.length-1].job
-        cont = data.length-1
+        person__img.src = data[cont].img
+        text.innerText = data[cont].text
+        user__name.innerText = data[cont].name
+        job.innerText = data[cont].job
+    }
+    else{
+        cont = data.length - 1
+        person__img.src = data[cont].img
+        text.innerText = data[cont].text
+        user__name.innerText = data[cont].name
+        job.innerText = data[cont].job
     }
 }
 
 const changeNext = ()=>{
-    if(cont < data.length - 1){
-        person__img.src = data[cont+1].img
-        text.innerText = data[cont+1].text
-        user__name.innerText = data[cont+1].name
-        job.innerText = data[cont+1].job
+    if(cont<data.length-1){
         cont++
-    }else{
-        person__img.src = data[0].img
-        text.innerText = data[0].text
-        user__name.innerText = data[0].name
-        job.innerText = data[0].job
+        person__img.src = data[cont].img
+        text.innerText = data[cont].text
+        user__name.innerText = data[cont].name
+        job.innerText = data[cont].job
+    }
+    else{
         cont = 0
+        person__img.src = data[cont].img
+        text.innerText = data[cont].text
+        user__name.innerText = data[cont].name
+        job.innerText = data[cont].job
     }
 }
 

@@ -4,5 +4,7 @@
         grid-template-columns: repeat(2,50%);
         align-items: center;
         justify-content: center;
+        position: relative;
+        left: 5%;
     }
 }
