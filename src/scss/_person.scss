@@ -17,11 +17,11 @@
     &__buttons{
         position: absolute;
         z-index: 100;
-        bottom: 0;
+        bottom: 10px;
         background-color: white;
 
         display: grid;
-        grid-template-columns: repeat(2,50px);
+        grid-template-columns: repeat(2,40px);
         grid-template-rows: 40px;
         align-items: center;
         justify-content: center;
@@ -44,11 +44,13 @@
 
 .button{
     &-prev,&-next{
+        padding: .3em;
     }
 }
 
 @media screen and (min-width:1024px){
     .person{
+
         grid-column: 2/3;
         grid-row: 1/2;
         margin-right: 2em;
@@ -57,8 +59,7 @@
         left: -85px;
 
         &__buttons{
-            left: 80px;
-            bottom: 10px;
+            left: 22%;
         }
 
         &__bg{
@@ -66,8 +67,33 @@
             bottom: -2px;
         }
     }
+}
 
-    .button{
+@media screen and (min-width:1240px){
+    .person{
 
+        &__buttons{
+            grid-template-columns: repeat(2,45px);
+            grid-template-rows: 45px;
+
+            left: 150px;
+        }
+    }
+
+}
+
+@media screen and (min-width:1440px){
+    .person{
+        &__bg{
+            height: 600px;
+            bottom: -10px;
+        }
+
+        &__buttons{
+            grid-template-columns: repeat(2,50px);
+            grid-template-rows: 50px;
+
+            left: 150px;
+        }
     }
 }

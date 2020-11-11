@@ -17,6 +17,7 @@ $texts : 'Inter', sans-serif;
 /* Base */
 
 body{
+    height: 100vh;
     font-size: 32px;
     background-image: url(/images/pattern-curve.svg);
     background-size: 80%;
@@ -35,10 +36,11 @@ body{
 
 @media screen and (min-width:1024px){
     body{
-        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        background-size: 45%;
     }
     .attribution{
         position: absolute;

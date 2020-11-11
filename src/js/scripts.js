@@ -18,11 +18,13 @@ const prev = document.getElementsByClassName('button-prev')[0];
 const next = document.getElementsByClassName('button-next')[0];
 
 const person__img = document.getElementsByClassName('person__img')[0];
+const user = document.getElementsByClassName('user')[0];
 const text =  document.getElementsByClassName('user__text')[0];
 const user__name = document.getElementsByClassName('user__name')[0];
 const job = document.getElementsByClassName('user__job')[0];
 
 const changePrev = ()=>{
+    startAnimate()
     if(cont>0){
         cont--
         person__img.src = data[cont].img
@@ -40,6 +42,7 @@ const changePrev = ()=>{
 }
 
 const changeNext = ()=>{
+    startAnimate()
     if(cont<data.length-1){
         cont++
         person__img.src = data[cont].img
@@ -56,12 +59,24 @@ const changeNext = ()=>{
     }
 }
 
+const startAnimate = ()=>{
+    user.classList.add('animate__animated','animate__bounceIn')
+    person__img.classList.add('animate__animated','animate__pulse')
+}
+
+const endAnimate = ()=>{
+    user.classList.remove('animate__animated','animate__bounceIn')
+    person__img.classList.remove('animate__animated','animate__pulse')
+}
+
 let cont = 0
 
 prev.addEventListener('click',()=>{
     changePrev()
+    setTimeout(endAnimate,1000)
 })
 
 next.addEventListener('click',()=>{
     changeNext()
+    setTimeout(endAnimate,1000)
 })
